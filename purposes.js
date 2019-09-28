@@ -1,13 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const brandSchema = new Schema({
+const purposeSchema = new Schema({
     _id: mongoose.Schema.Types.ObjectId,
     name: String,
-    img: String,
     description: String,
     isDeleted: {type:Boolean, default: false}
 });
 
-const Brand = mongoose.model('Brand', brandSchema);
-module.exports = Brand;
+const Purpose = mongoose.model('Purpose', purposeSchema);
+module.exports = Purpose;

@@ -10,7 +10,8 @@ const orderSchema = new Schema({
     cart: {type: Object, required: true},
     payment: {type: String, enum:['Ship COD','Credit card']},
     created: Date,
-    status: {type: String, enum:['Đã giao', 'Đang giao', 'Chưa giao']}
+    status: {type: String, enum:['Đã giao', 'Đang giao', 'Chưa giao']},
+    isDeleted: {type:Boolean, default: false}
 });
 
 const Order = mongoose.model('Order', orderSchema);

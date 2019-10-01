@@ -10,10 +10,10 @@ const productSchema = new Schema ({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Brand'
     },
-    purpose: {
+    components: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Purpose'
-    },
+        ref: 'Component'
+    }],
     size: Number,
     price: Number,
     description: String,

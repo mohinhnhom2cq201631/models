@@ -10,10 +10,22 @@ const productSchema = new Schema ({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Brand'
     },
-    components: [{
+    chip: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Component'
-    }],
+    },
+    vga: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Component'
+    },
+    ram: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Component'
+    },
+    purpose: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Component'
+    },
     size: Number,
     price: Number,
     description: String,

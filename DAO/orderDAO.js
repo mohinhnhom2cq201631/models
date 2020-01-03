@@ -14,3 +14,7 @@ exports.get_User_By_OrderID = async id =>{
 exports.get_Order_By_ID = id => {
     return Order.findById(id).populate('user');
 }
+
+exports.get_Order_List_By_UserID = async id => {
+    return Order.find({user: id, isDeleted: false});
+}
